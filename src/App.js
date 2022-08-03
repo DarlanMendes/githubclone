@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {Routes, Route} from 'react-router-dom';
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import Login from './Pages/Login/Login';
+import Home from './Pages/Home/Home';
+import Repository from './Pages/Followers/Followers';
+import Followers from './Pages/Following/Following';
+import Following from './Pages/Following/Following';
 
 function App() {
+  const [json, setJson]=useState();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar/>
+      <Routes>
+
+        <Route path="/" element={<Login/>}/>
+        <Route path="/home" element={<Home json={json} setJson={setJson}/>}/>
+        <Route path="/repository" element={<Repository/>}/>
+        <Route path="/followers" element={<Followers/>}/>
+        <Route path="/following" element={<Following/>}/>
+
+      </Routes>
+
+
+
+
+
+      
     </div>
   );
 }

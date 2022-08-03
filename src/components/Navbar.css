@@ -1,0 +1,43 @@
+.navbar {
+    position: fixed;
+    bottom: 0vh;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 340px;
+    border-radius: 15px 15px 0px 0px;
+
+    /* From https://css.glass */
+    background: rgba(85, 85, 230, 0.2);
+   
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(55px); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    width: 70px;
+    margin: 0 5px;
+}
+
+.navbar ul li a {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: yellow;
+    font-weight: 400;
+    
+  
+}
