@@ -7,20 +7,27 @@
 
 
 .home img {
-    height: 120px;
-    width: 120px;
+    position:absolute;
+    top:0;
+    height: 16vh;
+    width: 16vh;
     border-radius: 50%;
-    margin-top: 80px;
+    margin-top: 6vh;
     border:6px solid yellow;
-    box-shadow: 2px 2px 40px yellow;
+    box-shadow: 1px 1px 40px yellow;
 }
 
+.home h1{
+    position:relative;
+    top:138px;
+}
 .home .glass-table-1 {
-    position:absolute;
+    position:relative;
     top:220px;
     z-index: -1;
     height:50px;
-    width:350px;
+    width:75vw;
+    max-width: 400px;
     border-radius:20px ;
     margin: 10px auto;
     background: rgba(85, 85, 230, 0.2);
@@ -28,23 +35,27 @@
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(55px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 2px 2px 40px yellow;
+    box-shadow: 2px 2px 10px yellow;
 }
 
 .home .glass-table-2 {
-    position:absolute;
-    top:320px;
+    position:relative;
+    top:120px;
     z-index: -1;
     height:100px;
-    width:380px;
+    width:85vw;
     border-radius:20px ;
-    margin: 10px auto;
+    margin: 2vh auto;
     background: rgba(85, 85, 230, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(55px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 2px 2px 40px yellow;
+    box-shadow: 2px 2px 10px yellow;
+    transition:0.6s;
+}
+.home .glass-table-2:hover {
+    box-shadow: 10px 10px 90px yellow;
 }
 
 .home ul {
@@ -53,8 +64,8 @@
     left:-20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-around;
+    width: 90%;
 }
 .home ul li{
     display:flex;
@@ -64,17 +75,30 @@
     margin: 0;
 }
 .home ul li h1{
+    position:relative;
+    top:-25px;
     margin: 0;
 }
 .home ul li h4{
+    position:relative;
+    top:-25px;
     margin: 0;
 }
 .home .home-bio{
-    height:200px;
-    width:300px;
+    position: relative;
+    top:-50px;
+    height:25vh;
+    width:80vw;
     border-radius: 30px;
     padding: 23px;
     margin-top: 80px;
-    background-color: rgba(255, 255, 0, 0.366);
+    border: 3px solid rgb(85,23,230);
+    background-color: rgba(255, 255, 0, 0.5);
     
+}
+.home .home-bio h2{
+    margin:0.5vh;
+}
+.home .home-bio p{
+    text-align: start;
 }

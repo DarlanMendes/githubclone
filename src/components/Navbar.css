@@ -5,6 +5,7 @@
     flex-direction: row;
     height: 70px;
     width: 340px;
+    z-index: 3;
     border-radius: 15px 15px 0px 0px;
 
     /* From https://css.glass */

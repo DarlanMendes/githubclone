@@ -28,8 +28,8 @@ const Home = ({ json, setJson }) => {
 
 
             <div className="home-bio">
-                <h2> BIO </h2>
-                <p> {json ? json.blog : "Nenhuma descrição disponível"}</p>
+                <h2> Bio: </h2>
+                <p> "{json ? json.blog===''&&"Nenhuma descrição disponível." : "Nenhuma descrição disponível"} "</p>
             </div>
 
         </div>

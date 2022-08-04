@@ -1,0 +1,44 @@
+
+.repository{
+    position:absolute;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    height: 80vh;
+    top:5vh;
+    
+    
+    
+}
+.repository-container-card{
+    overflow-y:scroll;
+    height:87vh;
+}
+.repository-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+    width:70vw;
+    padding: 20px;
+    margin: 3% 0;
+    top:0vh;
+    border-radius: 20px;
+    background: rgba(85, 85, 230, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(55px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.repository-star{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+#stargazer{
+    color:yellow;
+    margin: 10px;
+}

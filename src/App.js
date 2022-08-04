@@ -5,8 +5,8 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Login from './Pages/Login/Login';
 import Home from './Pages/Home/Home';
-import Repository from './Pages/Followers/Followers';
-import Followers from './Pages/Following/Following';
+import Repository from './Pages/Repository/Repository'
+import Followers from './Pages/Followers/Followers';
 import Following from './Pages/Following/Following';
 
 function App() {
@@ -14,12 +14,12 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar/>
+      {json&&<Navbar/>}
       <Routes>
 
         <Route path="/" element={<Login/>}/>
         <Route path="/home" element={<Home json={json} setJson={setJson}/>}/>
-        <Route path="/repository" element={<Repository/>}/>
+        <Route path="/repository" element={<Repository json={json}/>}/>
         <Route path="/followers" element={<Followers/>}/>
         <Route path="/following" element={<Following/>}/>
 

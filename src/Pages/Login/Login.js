@@ -2,9 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import github from '../../Assets/img/github.png'
 import './Login.css';
+export const base_URL = "https://api.github.com/users/";
 const Login=()=>{
     const[profileName,setProfileName]=useState();
-    const base_URL = "https://api.github.com/users/";
+    //const base_URL = "https://api.github.com/users/";
     let navigate = useNavigate();
     const loginGit=async()=>{
         let request = await fetch(base_URL+profileName);
@@ -23,4 +24,4 @@ const Login=()=>{
     
     )
 }
-export default Login;
+export default Login ;
