@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { base_URL } from "../Login/Login";
 import './Repository.css'
+import RepositoryCard from "../../components/Repository";
 import { FaStar } from "react-icons/fa";
 
-const Repository = ({ json }) => {
-    const [jsonRepos, setJsonRepos] = useState([]);
+const Repository = ({ json,jsonRepos,setJsonRepos }) => {
+    
+
     const fetchUserRepository = async () => {
         let resultUserRepository = await fetch(base_URL + json.login + '/repos');
         let jsonRes = await resultUserRepository.json();
         setJsonRepos(jsonRes);
+        localStorage.setItem('jsonRepos', JSON.stringify(jsonRepos));
     }
     useEffect(() => {
         fetchUserRepository();
@@ -19,17 +22,7 @@ const Repository = ({ json }) => {
 
 
                 {jsonRepos && jsonRepos.map((item, key) => (
-                    <main key={key} className="repository-card">
-                        <span>
-                            {item.name}
-                        </span>
-                        <div>
-                            <span className="repository-star">
-                                <FaStar id="stargazer" />
-                                {item.stargazers_count}
-                            </span>
-                        </div>
-                    </main>
+                    <RepositoryCard key={key} item={item}/>
                 ))}
             </div>
         </div>

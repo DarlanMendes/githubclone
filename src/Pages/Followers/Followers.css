@@ -1,5 +1,4 @@
-
-.repository{
+.followers{
     position:absolute;
     flex-direction: column;
     flex-wrap: wrap;
@@ -8,4 +7,9 @@
     height: 80vh;
     top:5vh;  
     
+}
+.followers-container{
+    overflow-y:scroll;
+    height:87vh;
+
 }

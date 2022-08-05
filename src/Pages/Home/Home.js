@@ -6,7 +6,12 @@ const Home = ({ json, setJson }) => {
 
 
     useEffect(() => {
+        
         setJson(JSON.parse(localStorage.getItem("json_current_user")));
+        if(!localStorage.getItem("json_current_user")){
+            window.location.pathname='/';
+        }
+        
     }, [])
     return (
         <div className="home">
