@@ -19,7 +19,7 @@ const Login = () => {
         <div className="login">
             <img src={github} />
             
-                <input type="text" onChange={(typed) => { setProfileName(typed.target.value) }}></input>
+                <input type="text" placeholder="Insira seu nome de usuário" onChange={(typed) => { setProfileName(typed.target.value) }}></input>
                 <button onClick={loginGit}> Login</button>
 
         </div >
